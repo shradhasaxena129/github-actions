@@ -26,7 +26,7 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: |
           echo $DOCKER_PASSWORD | docker login ghcr.io -u $DOCKER_USERNAME --password-stdin
-          docker build --tag $IMAGE_NAME /home/knoldus/Documents/demo2/Dockerfile
+          docker build --tag $IMAGE_NAME /demo2/Dockerfile
           docker push $IMAGE_NAME
 
 
