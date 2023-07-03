@@ -28,7 +28,6 @@ jobs:
           DOCKER_USERNAME: shradhasaxena129
           DOCKER_PASSWORD: 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
         run: |
-#          echo  | docker login ghcr.io -u
           echo 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 | docker login ghcr.io -u shradhasaxena129 --password-stdin
           docker buildx build --push --tag ghcr.io/shradhasaxena129/gke-deployment-ci-cd .
 
