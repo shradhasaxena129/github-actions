@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: ghcr.io/<username>/<repository>/<image-name>:latest
+  IMAGE_NAME: ghcr.io/shradhasaxena129/GHCR:latest
   GKE_PROJECT: your-gke-project
   GKE_CLUSTER: your-gke-cluster
   GKE_NAMESPACE: your-gke-namespace
