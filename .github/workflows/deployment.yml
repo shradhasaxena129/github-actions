@@ -29,7 +29,6 @@ jobs:
           docker build --tag $IMAGE_NAME /demo2/Dockerfile
           docker push $IMAGE_NAME
 
-
 #      - name: Set up Google Cloud SDK
 #        uses: google-github-actions/setup-gcloud@v0.5.0
 #        with:
