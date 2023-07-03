@@ -28,7 +28,7 @@ jobs:
           DOCKER_USERNAME: shradhasaxena129
           DOCKER_PASSWORD: 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
         run: |
-          echo $DOCKER_PASSWORD | docker login ghcr.io -u $DOCKER_USERNAME --password-stdin
+          echo shradhasaxena129 | docker login ghcr.io -u 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
           docker buildx build --push --tag ghcr.io/shradhasaxena129/gke-deployment-ci-cd .
 
       - name: Set up Google Cloud SDK
