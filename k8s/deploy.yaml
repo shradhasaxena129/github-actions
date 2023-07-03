@@ -1,21 +1,21 @@
-#apiVersion: apps/v1
-#kind: Deployment
-#metadata:
-#  name: hello-application-java-17
-#  labels:
-#    app: hello-application-java-17
-#spec:
-#  replicas: 1
-#  selector:
-#    matchLabels:
-#      app: hello-application-java-17
-#  template:
-#    metadata:
-#      labels:
-#        app: hello-application-java-17
-#    spec:
-#      containers:
-#        - name: hello-application-java-17
-##          image: gcr.io/my-kubernetes-project-389604/gke-deployment-ci-cd
-#          ports:
-#            - containerPort: 8080
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-application-java-17
+  labels:
+    app: hello-application-java-17
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-application-java-17
+  template:
+    metadata:
+      labels:
+        app: hello-application-java-17
+    spec:
+      containers:
+        - name: hello-application-java-17
+#          image: gcr.io/my-kubernetes-project-389604/gke-deployment-ci-cd
+          ports:
+            - containerPort: 8080
