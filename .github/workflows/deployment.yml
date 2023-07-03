@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: ghcr.io/shradhasaxena129/GHCR:latest
+  IMAGE_NAME: ghcr.io/shradhasaxena129/my-app/web-server:latest
   GKE_PROJECT: your-gke-project
   GKE_CLUSTER: your-gke-cluster
   GKE_NAMESPACE: your-gke-namespace
