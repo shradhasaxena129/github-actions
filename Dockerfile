@@ -8,5 +8,5 @@
 FROM openjdk:19-jdk
 WORKDIR /app
 #COPY target/demo2-0.0.1-SNAPSHOT.jar app.jar
-COPY demo2-0.0.1-SNAPSHOT.jar /app/app.jar
+COPY /home/knoldus/Documents/demo2/target/demo2-0.0.1-SNAPSHOT.jar app.jar
 CMD ["java", "-jar", "app.jar"]

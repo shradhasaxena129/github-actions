@@ -26,7 +26,7 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: |
           echo $DOCKER_PASSWORD | docker login ghcr.io -u $DOCKER_USERNAME --password-stdin
-          docker build --tag $IMAGE_NAME target/demo2-0.0.1-SNAPSHOT.jar app.jar
+          docker build --tag $IMAGE_NAME .
           docker push $IMAGE_NAME
 
 #      - name: Set up Google Cloud SDK
