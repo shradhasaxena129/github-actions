@@ -3,7 +3,7 @@ name: Deploy to GKE
 on: push
 
 env:
-  IMAGE_NAME: ghcr.io/<username>/<repository>/<image-name>:latest
+  IMAGE_NAME: ghcr.io/shradhasaxena129/myapp/myimage:latest
 #  GKE_PROJECT: your-gke-project
 #  GKE_CLUSTER: your-gke-cluster
 #  GKE_NAMESPACE: your-gke-namespace
