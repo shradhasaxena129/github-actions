@@ -53,7 +53,7 @@ jobs:
       - name: Publish
         run: |
           docker push ghcr.io/shradhasaxena129/gke-deployment-ci-cd
-            # Push the Docker image to Google Container Registry
+      # Push the Docker image to Google Container Registry
 
 #  build-and-push-image:
 #    runs-on: ubuntu-latest
