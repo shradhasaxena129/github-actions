@@ -29,18 +29,18 @@ jobs:
           docker build --tag $IMAGE_NAME .
           docker push $IMAGE_NAME
 
-#      - name: Set up Google Cloud SDK
-#        uses: google-github-actions/setup-gcloud@v0.5.0
-#        with:
-#          version: 'latest'
-#          service_account_key: ${{ secrets.GKE_SA_KEY }}
-#
-#      - name: Configure kubectl
-#        run: |
-#          echo "$KUBECONFIG" | base64 --decode > kubeconfig.yaml
-#          gcloud auth activate-service-account --key-file=kubeconfig.yaml
-#          gcloud container clusters get-credentials $GKE_CLUSTER --project $GKE_PROJECT --zone your-gke-zone
-#
-#      - name: Deploy to GKE
-#        run: |
-#          kubectl apply -f path/to/your/deployment.yaml --namespace $GKE_NAMESPACE
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v0.5.0
+        with:
+          version: 'latest'
+          service_account_key: ${{ secrets.GKE_SA_KEY }}
+
+      - name: Configure kubectl
+        run: |
+          echo "$KUBECONFIG" | base64 --decode > kubeconfig.yaml
+          gcloud auth activate-service-account --key-file=kubeconfig.yaml
+          gcloud container clusters get-credentials $GKE_CLUSTER --project $GKE_PROJECT --zone your-gke-zone
+
+      - name: Deploy to GKE
+        run: |
+          kubectl apply -f path/to/your/deployment.yaml --namespace $GKE_NAMESPACE
