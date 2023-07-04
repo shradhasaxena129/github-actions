@@ -38,9 +38,10 @@ jobs:
       - name: Configure kubectl
         run: |
           echo "$KUBECONFIG" > kubeconfig.yaml
+          export KUBECONFIG=$(pwd)/kubeconfig.yaml
           gcloud auth activate-service-account --key-file=kubeconfig.yaml
           gcloud container clusters get-credentials $GKE_CLUSTER --project $GKE_PROJECT --zone us-central1
-#      - name: Configure kubectl
+      #      - name: Configure kubectl
 #        run: |
 #          echo "$KUBECONFIG" | base64 --decode > kubeconfig.yaml
 #          export KUBECONFIG=$(pwd)/kubeconfig.yaml
