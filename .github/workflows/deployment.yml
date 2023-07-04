@@ -4,10 +4,10 @@ on: push
 
 env:
   IMAGE_NAME: ghcr.io/shradhasaxena129/myapp/myimage:latest
-#  GKE_PROJECT: your-gke-project
-#  GKE_CLUSTER: your-gke-cluster
-#  GKE_NAMESPACE: your-gke-namespace
-#  KUBECONFIG: ${{ secrets.GKE_KUBECONFIG }}
+  GKE_PROJECT: ci-cd-demo-part2
+  GKE_CLUSTER: cluster-1
+  GKE_NAMESPACE: your-gke-namespace
+  KUBECONFIG: ${{ secrets.GKE_KUBECONFIG }}
 
 jobs:
   deploy:
@@ -28,7 +28,7 @@ jobs:
           echo $DOCKER_PASSWORD | docker login ghcr.io -u $DOCKER_USERNAME --password-stdin
           docker build --tag $IMAGE_NAME .
           docker push $IMAGE_NAME
-
+## Deployment
       - name: Set up Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v0.5.0
         with:
